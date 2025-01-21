@@ -1,12 +1,14 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { HelloWorldService } from '../../lib/helloworld';
-import { Label } from '@/components/ui/label';
+import { Card, CardContent } from "@/components/ui/card";
+import { HelloWorldService } from '@/lib/helloworld';
 
 export const HelloWorldLabel: React.FC = () => {
-  const [message, setMessage] = useState(HelloWorldService.getMessage());
+  const [message, setMessage] = useState<string>(HelloWorldService.getMessage());
 
   useEffect(() => {
-    const handleMessageChange = () => {
+    const handleMessageChange = (): void => {
       setMessage(HelloWorldService.getMessage());
     };
 
@@ -15,6 +17,12 @@ export const HelloWorldLabel: React.FC = () => {
   }, []);
 
   return (
-      <Label className="text-xl font-bold">{message}</Label>
+    <Card>
+      <CardContent className="pt-6">
+        <p className="text-xl font-semibold text-center">
+          {message || 'Click the button above!'}
+        </p>
+      </CardContent>
+    </Card>
   );
 }; 
