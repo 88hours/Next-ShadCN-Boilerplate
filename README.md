@@ -2,6 +2,11 @@
 
 A simple Hello World application demonstrating component communication using a service pattern in Next.js with TypeScript.
 
+## Prerequisites
+
+- Node.js (v18 or later)
+- pnpm (v8 or later)
+
 ## Project Structure
 
 ```
@@ -55,17 +60,32 @@ useEffect(() => {
 
 ## Getting Started
 
-1. Install dependencies:
+1. Install pnpm (if not already installed):
 ```bash
-npm install
+npm install -g pnpm
 ```
 
-2. Run the development server:
+2. Install dependencies:
 ```bash
-npm run dev
+pnpm install
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
+3. Run the development server:
+```bash
+pnpm dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## Available Scripts
+
+```bash
+pnpm dev        # Start development server
+pnpm build      # Build for production
+pnpm start      # Start production server
+pnpm lint       # Run ESLint
+pnpm type-check # Run TypeScript compiler check
+```
 
 ## Technologies Used
 
@@ -73,6 +93,7 @@ npm run dev
 - TypeScript
 - React
 - Tailwind CSS
+- Shadcn/ui
 
 ## Features
 
@@ -80,6 +101,7 @@ npm run dev
 - Event-based component communication
 - TypeScript for type safety
 - Responsive design with Tailwind CSS
+- Modern UI components with Shadcn
 
 ## Future
 - https://github.com/react-boilerplate/react-boilerplate/tree/master/app
